@@ -210,9 +210,16 @@
     .dish-copy h3 { margin: 5px 0 0; font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.55rem); font-weight: 400; line-height: 1.05; }
 
     .visit { color: #fff; background: var(--sea); }
-    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; }
-    .visit-image { min-height: 440px; background: url("https://raw.githubusercontent.com/agmurillo342-sketch/Restaurante-El-Playon/main/assets/img/platillo-mariscos-mixtos.jpg") center / cover no-repeat; }
-    .visit-copy { display: flex; flex-direction: column; justify-content: center; padding: 72px clamp(34px, 7vw, 100px); }
+    .visit-grid { min-height: 560px; }
+    .visit-copy {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-inline: auto;
+      padding: 88px 0;
+    }
     .visit-copy .eyebrow { color: #f59a72; }
     .visit-copy p { max-width: 460px; color: rgba(255, 255, 255, .76); }
     .visit-details { margin: 22px 0 34px; padding: 0; list-style: none; border-top: 1px solid rgba(255, 255, 255, .16); }
@@ -247,10 +254,9 @@
       .hero { min-height: 86svh; }
       .hero::after { background: linear-gradient(90deg, rgba(5, 26, 31, .82), rgba(5, 26, 31, .28)), linear-gradient(0deg, rgba(5, 26, 31, .5), transparent); }
       .hero-inner { padding-bottom: 64px; }
-      .intro-grid, .visit-grid { grid-template-columns: 1fr; gap: 42px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 42px; }
       .dish:nth-child(n) { grid-column: span 6; }
       .dish:nth-child(3) { grid-column: 3 / span 8; }
-      .visit-image { order: 2; }
     }
     @media (max-width: 560px) {
       .shell { width: min(100% - 28px, 1160px); }
@@ -266,7 +272,7 @@
       .dish-grid { display: grid; grid-template-columns: 1fr; }
       .dish:nth-child(n) { grid-column: auto; min-height: 390px; }
       .visit-grid { min-height: auto; }
-      .visit-copy { padding: 72px 24px; }
+      .visit-copy { width: min(100% - 28px, 1160px); min-height: auto; padding: 72px 0; }
       .visit-details li { display: grid; gap: 2px; }
       .footer-inner { display: grid; }
     }
@@ -351,7 +357,6 @@
 
     <section class="visit" id="visitanos">
       <div class="visit-grid">
-        <div class="visit-image" role="img" aria-label="Platillo de mariscos con camarón y pulpo"></div>
         <div class="visit-copy reveal">
           <p class="eyebrow">Planea tu visita</p>
           <h2>Nos vemos en Punta Pérula.</h2>
